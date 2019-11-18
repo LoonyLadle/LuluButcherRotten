@@ -43,7 +43,7 @@ namespace LoonyLadle.ButcherCorpses
 
 			if (stage == RotStage.Rotting)
 			{
-				butcher.needs.mood.thoughts.memories.TryGainMemory(MyDefOf.LuluButcherCorpses_ButcheredRottenThought);
+				butcher.needs.mood.thoughts.memories.TryGainMemory(MyDefOf.LuluButcherCorpses_ButcheredRotten);
 				FilthMaker.MakeFilth(butcher.Position, butcher.Map, ThingDefOf.Filth_CorpseBile, __instance.InnerPawn.LabelIndefinite());
 			}
 		}

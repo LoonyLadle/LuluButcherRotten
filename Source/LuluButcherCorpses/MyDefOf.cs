@@ -9,6 +9,6 @@ namespace LoonyLadle.ButcherCorpses
 	{
 		static MyDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(MyDefOf));
 
-		public static ThoughtDef LuluButcherCorpses_ButcheredRottenThought;
+		public static ThoughtDef LuluButcherCorpses_ButcheredRotten;
 	}
 }

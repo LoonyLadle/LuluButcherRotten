@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <Defs>
 	<ThoughtDef>
-		<defName>LuluButcherCorpses_ButcheredRottenThought</defName>
+		<defName>LuluButcherCorpses_ButcheredRotten</defName>
 		<durationDays>1</durationDays>
 		<stackLimit>10</stackLimit>
 		<stackedEffectMultiplier>0.75</stackedEffectMultiplier>
