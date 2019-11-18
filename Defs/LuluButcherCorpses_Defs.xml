@@ -25,12 +25,12 @@
 	</SpecialThingFilterDef>-->
 
 	<SpecialThingFilterDef>
-		<defName>LuluButcherCorpses_AllowDesiccated</defName>
-		<label>allow desiccated</label>
+		<defName>LuluButcherCorpses_AllowDessicated</defName>
+		<label>allow dessicated</label>
 		<description>Allow organic things which have completely rotted.</description>
 		<parentCategory>Root</parentCategory>
 		<allowedByDefault>true</allowedByDefault>
-		<saveKey>loonyladle_butchercorpses_allowDesiccated</saveKey>
-		<workerClass>LoonyLadle.ButcherCorpses.SpecialThingFilterWorker_Desiccated</workerClass>
+		<saveKey>loonyladle_butchercorpses_allowDessicated</saveKey>
+		<workerClass>LoonyLadle.ButcherCorpses.SpecialThingFilterWorker_Dessicated</workerClass>
 	</SpecialThingFilterDef>
 </Defs>
