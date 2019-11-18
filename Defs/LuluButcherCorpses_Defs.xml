@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Defs>
+	<ThoughtDef>
+		<defName>LuluButcherCorpses_ButcheredRottenThought</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>10</stackLimit>
+		<stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>butchered rotting corpse</label>
+				<description>I butchered a rotten corpse. It was disgusting.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

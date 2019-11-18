@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Patch>
+	<!-- Remove rotten restriction on flesh butchery. -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/RecipeDef[defName="ButcherCorpseFlesh"]/specialFiltersToDisallow/li[text()="AllowRotten"]</xpath>
+	</Operation>
+</Patch>
