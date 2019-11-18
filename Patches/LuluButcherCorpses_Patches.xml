@@ -19,7 +19,7 @@
 		<xpath>Defs/RecipeDef[defName="ButcherCorpseFlesh"]/defaultIngredientFilter/specialFiltersToDisallow</xpath>
 		<value>
 			<li>AllowRotten</li>
-			<li>LuluButcherCorpses_AllowDesiccated</li>
+			<li>LuluButcherCorpses_AllowDessicated</li>
 		</value>
 	</Operation>
 
