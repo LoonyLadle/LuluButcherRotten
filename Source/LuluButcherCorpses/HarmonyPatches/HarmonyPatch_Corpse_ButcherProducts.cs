@@ -12,11 +12,11 @@ namespace LoonyLadle.ButcherCorpses
 	{
 		public static IEnumerable<Thing> Postfix(IEnumerable<Thing> entries, Corpse __instance, Pawn butcher)
 		{
-			RotStage rot = __instance.GetRotStage();
+			RotStage stage = __instance.GetRotStage();
 
 			foreach (Thing entry in entries)
 			{
-				if (rot != RotStage.Fresh)
+				if (stage != RotStage.Fresh)
 				{
 					CompRottable comp = entry.TryGetComp<CompRottable>();
 
@@ -27,7 +27,7 @@ namespace LoonyLadle.ButcherCorpses
 					}
 					else if (comp != null)
 					{
-						if ((rot == RotStage.Dessicated) || comp.PropsRot.rotDestroys)
+						if ((stage == RotStage.Dessicated) || comp.PropsRot.rotDestroys)
 						{
 							entry.Destroy();
 							continue;
@@ -38,14 +38,13 @@ namespace LoonyLadle.ButcherCorpses
 						}
 					}
 				}
-
 				yield return entry;
 			}
 
-			if (rot == RotStage.Rotting)
+			if (stage == RotStage.Rotting)
 			{
 				butcher.needs.mood.thoughts.memories.TryGainMemory(MyDefOf.LuluButcherCorpses_ButcheredRottenThought);
-				FilthMaker.MakeFilth(butcher.Position, butcher.Map, ThingDefOf.Filth_CorpseBile, __instance.InnerPawn.LabelIndefinite(), 1);
+				FilthMaker.MakeFilth(butcher.Position, butcher.Map, ThingDefOf.Filth_CorpseBile, __instance.InnerPawn.LabelIndefinite());
 			}
 		}
 	}
