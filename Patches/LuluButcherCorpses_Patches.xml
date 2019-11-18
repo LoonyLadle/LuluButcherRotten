@@ -2,6 +2,6 @@
 <Patch>
 	<!-- Remove rotten restriction on flesh butchery. -->
 	<Operation Class="PatchOperationRemove">
-		<xpath>Defs/RecipeDef[defName="ButcherCorpseFlesh"]/specialFiltersToDisallow/li[text()="AllowRotten"]</xpath>
+		<xpath>Defs/RecipeDef[defName="ButcherCorpseFlesh"]/fixedIngredientFilter/specialFiltersToDisallow/li[text()="AllowRotten"]</xpath>
 	</Operation>
 </Patch>
