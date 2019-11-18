@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Defs>
+	<ThoughtDef>
+		<defName>LuluButcherRotten_ButcheredRotten</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>10</stackLimit>
+		<stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>butchered rotting corpse</label>
+				<description>I butchered a rotten corpse. It was disgusting.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<SpecialThingFilterDef>
+		<defName>LuluButcherRotten_AllowDessicated</defName>
+		<label>allow dessicated</label>
+		<description>Allow organic things which have completely rotted.</description>
+		<parentCategory>Root</parentCategory>
+		<allowedByDefault>true</allowedByDefault>
+		<saveKey>loonyladle_butcherrotten_allowDessicated</saveKey>
+		<workerClass>LoonyLadle.ButcherRotten.SpecialThingFilterWorker_Dessicated</workerClass>
+	</SpecialThingFilterDef>
+</Defs>
