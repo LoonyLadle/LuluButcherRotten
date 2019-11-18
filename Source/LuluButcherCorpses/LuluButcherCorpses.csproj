@@ -50,6 +50,8 @@
     <Compile Include="MyDefOf.cs" />
     <Compile Include="MyStaticConstructor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpecialThingFilterWorker_Dessicated.cs" />
+    <Compile Include="SpecialThingFilterWorker_Rotten.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

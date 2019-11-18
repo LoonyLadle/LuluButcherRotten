@@ -13,4 +13,24 @@
 			</li>
 		</stages>
 	</ThoughtDef>
+
+	<!--<SpecialThingFilterDef>
+		<defName>LuluButcherCorpses_AllowRotting</defName>
+		<label>allow rotting</label>
+		<description>Allow organic things which have started to rot.</description>
+		<parentCategory>Root</parentCategory>
+		<allowedByDefault>true</allowedByDefault>
+		<saveKey>loonyladle_butchercorpses_allowRotting</saveKey>
+		<workerClass>LoonyLadle.ButcherCorpses.SpecialThingFilterWorker_Rotten</workerClass>
+	</SpecialThingFilterDef>-->
+
+	<SpecialThingFilterDef>
+		<defName>LuluButcherCorpses_AllowDesiccated</defName>
+		<label>allow desiccated</label>
+		<description>Allow organic things which have completely rotted.</description>
+		<parentCategory>Root</parentCategory>
+		<allowedByDefault>true</allowedByDefault>
+		<saveKey>loonyladle_butchercorpses_allowDesiccated</saveKey>
+		<workerClass>LoonyLadle.ButcherCorpses.SpecialThingFilterWorker_Desiccated</workerClass>
+	</SpecialThingFilterDef>
 </Defs>
