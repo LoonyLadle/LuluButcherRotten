@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <ModMetaData>
-  <name>Lulu's Butcher Corpses</name>
-  <author>LoonyLadle</author>
-  <supportedVersions>
-    <li>1.0</li>
-  </supportedVersions>
-  <url>https://ludeon.com/forums/index.php?topic=49129</url>
-  <description>Meaningful butchery of rotten and dessicated corpses.</description>
+	<name>Lulu's Butcher Corpses</name>
+	<author>LoonyLadle</author>
+	<supportedVersions>
+		<li>1.0</li>
+	</supportedVersions>
+	<url>https://ludeon.com/forums/index.php?topic=49129</url>
+	<description>Meaningful butchery of rotten and dessicated corpses.</description>
 </ModMetaData>
