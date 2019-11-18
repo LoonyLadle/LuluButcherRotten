@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BA46CD5E-3821-4FBC-BEA1-1DBA78081339}</ProjectGuid>
+    <ProjectGuid>{72D4829C-0CE7-4044-ADDD-CB6276B09142}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LoonyLadle.ButcherCorpses</RootNamespace>
@@ -50,6 +50,8 @@
     <Compile Include="MyDefOf.cs" />
     <Compile Include="MyStaticConstructor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpecialThingFilterWorker_Dessicated.cs" />
+    <Compile Include="SpecialThingFilterWorker_Rotten.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

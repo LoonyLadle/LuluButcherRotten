@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <Defs>
 	<ThoughtDef>
-		<defName>LuluButcherCorpses_ButcheredRottenThought</defName>
+		<defName>LuluButcherCorpses_ButcheredRotten</defName>
 		<durationDays>1</durationDays>
 		<stackLimit>10</stackLimit>
 		<stackedEffectMultiplier>0.75</stackedEffectMultiplier>
@@ -13,4 +13,24 @@
 			</li>
 		</stages>
 	</ThoughtDef>
+
+	<!--<SpecialThingFilterDef>
+		<defName>LuluButcherCorpses_AllowRotting</defName>
+		<label>allow rotting</label>
+		<description>Allow organic things which have started to rot.</description>
+		<parentCategory>Root</parentCategory>
+		<allowedByDefault>true</allowedByDefault>
+		<saveKey>loonyladle_butchercorpses_allowRotting</saveKey>
+		<workerClass>LoonyLadle.ButcherCorpses.SpecialThingFilterWorker_Rotten</workerClass>
+	</SpecialThingFilterDef>-->
+
+	<SpecialThingFilterDef>
+		<defName>LuluButcherCorpses_AllowDessicated</defName>
+		<label>allow dessicated</label>
+		<description>Allow organic things which have completely rotted.</description>
+		<parentCategory>Root</parentCategory>
+		<allowedByDefault>true</allowedByDefault>
+		<saveKey>loonyladle_butchercorpses_allowDessicated</saveKey>
+		<workerClass>LoonyLadle.ButcherCorpses.SpecialThingFilterWorker_Dessicated</workerClass>
+	</SpecialThingFilterDef>
 </Defs>
