@@ -23,13 +23,6 @@
 		</value>
 	</Operation>
 
-	<!--<Operation Class="PatchOperationAdd">
-		<xpath>Defs/SpecialThingFilterDef[defName="AllowRotten"]</xpath>
-		<value>
-			<configurable>false</configurable>
-		</value>
-	</Operation>-->
-	
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/SpecialThingFilterDef[defName="AllowRotten"]/workerClass</xpath>
 		<value>
