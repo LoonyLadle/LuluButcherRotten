@@ -24,10 +24,12 @@ namespace LoonyLadle.ButcherCorpses
 				{
 					discard   = true;
 					keepGoing = true;
+					Log.Message("[LuluButcherCorpses] Found transpiler start point.");
 				}
 				else if ((instruction.opcode == OpCodes.Call) && (instruction.operand == typeof(FilthMaker).GetMethod(nameof(FilthMaker.MakeFilth))))
 				{
 					keepGoing = false;
+					Log.Message("[LuluButcherCorpses] Found transpiler end point.");
 				}
 				else if ((instruction.opcode == OpCodes.Ldarg_0) && !keepGoing)
 				{
@@ -42,7 +44,11 @@ namespace LoonyLadle.ButcherCorpses
 						yield return blockInstruction;
 					}
 					blockInstructions.Clear();
-					discard = false;
+					if (discard)
+					{
+						discard = false;
+						Log.Message("[LuluButcherCorpses] Transpiler should have been successful.");
+					}
 				}
 				// Add the instruction to the block AFTER we've yielded the block,
 				// because our Ldarg_0 breakpoint is not meant to be a part of it.
