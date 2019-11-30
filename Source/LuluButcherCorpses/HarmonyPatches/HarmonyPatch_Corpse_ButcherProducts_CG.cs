@@ -12,7 +12,7 @@ using Verse;
 
 namespace LoonyLadle.ButcherCorpses
 {
-	[HarmonyPatch]
+	/*[HarmonyPatch()]
 	public static class HarmonyPatch_Corpse_ButcherProducts_CG
 	{
 		public static MethodBase TargetMethod()
@@ -73,5 +73,5 @@ namespace LoonyLadle.ButcherCorpses
 			// We're done.
 			yield break;
 		}
-	}
+	}*/
 }

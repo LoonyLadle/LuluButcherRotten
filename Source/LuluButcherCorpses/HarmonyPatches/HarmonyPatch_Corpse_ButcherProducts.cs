@@ -47,10 +47,10 @@ namespace LoonyLadle.ButcherCorpses
 				FilthMaker.MakeFilth(butcher.Position, butcher.Map, ThingDefOf.Filth_CorpseBile, __instance.InnerPawn.LabelIndefinite());
 			}
 
-			if ((stage != RotStage.Dessicated) && (__instance.InnerPawn.RaceProps.BloodDef != null))
+			/*if ((stage != RotStage.Dessicated) && (__instance.InnerPawn.RaceProps.BloodDef != null))
 			{
 				FilthMaker.MakeFilth(butcher.Position, butcher.Map, __instance.InnerPawn.RaceProps.BloodDef);
-			}
+			}*/
 		}
 	}
 }
