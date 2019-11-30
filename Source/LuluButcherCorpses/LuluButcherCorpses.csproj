@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HarmonyPatches\HarmonyPatch_Corpse_ButcherProducts_CG.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatch_Corpse_ButcherProducts.cs" />
     <Compile Include="MyDefOf.cs" />
     <Compile Include="MyStaticConstructor.cs" />
