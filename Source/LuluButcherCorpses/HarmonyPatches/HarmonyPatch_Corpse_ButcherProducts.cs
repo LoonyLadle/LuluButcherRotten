@@ -46,11 +46,6 @@ namespace LoonyLadle.ButcherCorpses
 				butcher.needs.mood.thoughts.memories.TryGainMemory(MyDefOf.LuluButcherCorpses_ButcheredRotten);
 				FilthMaker.MakeFilth(butcher.Position, butcher.Map, ThingDefOf.Filth_CorpseBile, __instance.InnerPawn.LabelIndefinite());
 			}
-
-			/*if ((stage != RotStage.Dessicated) && (__instance.InnerPawn.RaceProps.BloodDef != null))
-			{
-				FilthMaker.MakeFilth(butcher.Position, butcher.Map, __instance.InnerPawn.RaceProps.BloodDef);
-			}*/
 		}
 	}
 }
