@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using RimWorld;
 using System.Collections;
 using System.Collections.Generic;
@@ -34,7 +34,7 @@ namespace LoonyLadle.ButcherRotten
 				{
 					continue;
 				}
-				else if ((instruction.opcode == OpCodes.Callvirt) && (instruction.operand == targetMethod))
+				else if ((instruction.opcode == OpCodes.Callvirt) && ((MethodInfo)instruction.operand == targetMethod))
 				{
 					state = 1;
 				}
