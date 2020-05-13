@@ -38,10 +38,9 @@ namespace LoonyLadle.ButcherRotten
 				{
 					state = 1;
 				}
-				else if ((instruction.opcode == OpCodes.Brfalse) && (state == 1))
+				else if ((instruction.opcode == OpCodes.Brfalse_S) && (state == 1))
 				{
-					yield return new CodeInstruction(OpCodes.Ldarg_0);
-					yield return new CodeInstruction(instructionsAsList[i - 4]);
+					yield return new CodeInstruction(OpCodes.Ldloc_2);
 					yield return new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(RottableUtility), nameof(RottableUtility.IsDessicated)));
 					yield return new CodeInstruction(OpCodes.Brtrue, instruction.operand);
 					state = 2;
