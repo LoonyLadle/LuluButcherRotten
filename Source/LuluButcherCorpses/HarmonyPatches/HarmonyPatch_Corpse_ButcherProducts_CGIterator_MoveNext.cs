@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using RimWorld;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ namespace LoonyLadle.ButcherRotten
 	{
 		public static MethodBase TargetMethod()
 		{
-			return AccessTools.FirstInner(typeof(Corpse), t => t.HasAttribute<CompilerGeneratedAttribute>() && t.Name.Contains(nameof(Corpse.ButcherProducts))).GetMethod(nameof(IEnumerator.MoveNext));
+			return AccessTools.FirstInner(typeof(Corpse), t => t.HasAttribute<CompilerGeneratedAttribute>() && t.Name.Contains(nameof(Corpse.ButcherProducts))).GetMethod(nameof(IEnumerator.MoveNext), BindingFlags.NonPublic | BindingFlags.Instance);
 		}
 
 		public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
@@ -34,14 +34,13 @@ namespace LoonyLadle.ButcherRotten
 				{
 					continue;
 				}
-				else if ((instruction.opcode == OpCodes.Callvirt) && (instruction.operand == targetMethod))
+				else if ((instruction.opcode == OpCodes.Callvirt) && ((MethodInfo)instruction.operand == targetMethod))
 				{
 					state = 1;
 				}
-				else if ((instruction.opcode == OpCodes.Brfalse) && (state == 1))
+				else if ((instruction.opcode == OpCodes.Brfalse_S) && (state == 1))
 				{
-					yield return new CodeInstruction(OpCodes.Ldarg_0);
-					yield return new CodeInstruction(instructionsAsList[i - 4]);
+					yield return new CodeInstruction(OpCodes.Ldloc_2);
 					yield return new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(RottableUtility), nameof(RottableUtility.IsDessicated)));
 					yield return new CodeInstruction(OpCodes.Brtrue, instruction.operand);
 					state = 2;

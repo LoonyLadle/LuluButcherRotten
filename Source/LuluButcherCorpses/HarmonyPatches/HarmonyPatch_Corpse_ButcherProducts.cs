@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using RimWorld;
 using System.Collections.Generic;
 using Verse;
@@ -44,7 +44,7 @@ namespace LoonyLadle.ButcherRotten
 			if (stage == RotStage.Rotting)
 			{
 				butcher.needs.mood.thoughts.memories.TryGainMemory(MyDefOf.LuluButcherRotten_ButcheredRotten);
-				FilthMaker.MakeFilth(butcher.Position, butcher.Map, ThingDefOf.Filth_CorpseBile, __instance.InnerPawn.LabelIndefinite());
+				FilthMaker.TryMakeFilth(butcher.Position, butcher.Map, ThingDefOf.Filth_CorpseBile, __instance.InnerPawn.LabelIndefinite());
 			}
 		}
 	}

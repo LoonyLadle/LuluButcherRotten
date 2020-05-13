@@ -29,4 +29,11 @@
 			<workerClass>LoonyLadle.ButcherRotten.SpecialThingFilterWorker_Rotten</workerClass>
 		</value>
 	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="ButcherCorpseFlesh"]/interruptIfIngredientIsRotting</xpath>
+		<value>
+			<interruptIfIngredientIsRotting>false</interruptIfIngredientIsRotting>
+		</value>
+	</Operation>
 </Patch>

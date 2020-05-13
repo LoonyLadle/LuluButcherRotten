@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using Verse;
 
 #pragma warning disable IDE1006 // Naming Styles
@@ -10,7 +10,7 @@ namespace LoonyLadle.ButcherRotten
 	{
 		static MyStaticConstructor()
 		{
-			HarmonyInstance harmony = HarmonyInstance.Create("rimworld.loonyladle.butcherrotten");
+			Harmony harmony = new Harmony("rimworld.loonyladle.butcherrotten");
 			harmony.PatchAll();
 		}
 	}
