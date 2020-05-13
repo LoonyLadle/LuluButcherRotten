@@ -17,7 +17,7 @@ namespace LoonyLadle.ButcherRotten
 	{
 		public static MethodBase TargetMethod()
 		{
-			return AccessTools.FirstInner(typeof(Corpse), t => t.HasAttribute<CompilerGeneratedAttribute>() && t.Name.Contains(nameof(Corpse.ButcherProducts))).GetMethod(nameof(IEnumerator.MoveNext));
+			return AccessTools.FirstInner(typeof(Corpse), t => t.HasAttribute<CompilerGeneratedAttribute>() && t.Name.Contains(nameof(Corpse.ButcherProducts))).GetMethod(nameof(IEnumerator.MoveNext), BindingFlags.NonPublic | BindingFlags.Instance);
 		}
 
 		public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
